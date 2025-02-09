@@ -23,8 +23,8 @@ describe("List component works correctly", async () => {
     window.HTMLElement.prototype.scrollIntoView = scrollIntoView();
     const element = await listComponent.findAllByTestId("education");
     const methodNameFake = vi.spyOn(name, "scrollTo");
-    element[0].click();
     //comment back in when list for right element gets added
+    // element[0].click();
     // expect(methodNameFake).toHaveBeenCalledWith("education-element");
     // expect(scrollIntoView).toHaveBeenCalledOnce();
   });
