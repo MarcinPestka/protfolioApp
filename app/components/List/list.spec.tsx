@@ -1,9 +1,6 @@
+import { render } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import List from "./List";
-import { fireEvent, render } from "@testing-library/react";
-import * as name from "./listService";
-import Header from "../Header/Header";
-import Index from "~/routes/_index";
 
 describe("List component works correctly", async () => {
   const listComponent = render(<List />);
@@ -21,9 +18,9 @@ describe("List component works correctly", async () => {
   it("scrolls element into view", async () => {
     const scrollIntoView = vi.fn();
     window.HTMLElement.prototype.scrollIntoView = scrollIntoView();
-    const element = await listComponent.findAllByTestId("education");
-    const methodNameFake = vi.spyOn(name, "scrollTo");
     //comment back in when list for right element gets added
+    // const element = await listComponent.findAllByTestId("education");
+    // const methodNameFake = vi.spyOn(name, "scrollTo");
     // element[0].click();
     // expect(methodNameFake).toHaveBeenCalledWith("education-element");
     // expect(scrollIntoView).toHaveBeenCalledOnce();

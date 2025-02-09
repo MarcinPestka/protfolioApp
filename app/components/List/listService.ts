@@ -1,5 +1,5 @@
 export function scrollTo(id: string) {
-  var elmntToView = document.getElementById(id);
+  const elmntToView = document.getElementById(id);
   if (elmntToView) {
     elmntToView.scrollIntoView();
   }

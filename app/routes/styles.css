@@ -12,3 +12,8 @@
   top: 0;
   position: sticky;
 }
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
