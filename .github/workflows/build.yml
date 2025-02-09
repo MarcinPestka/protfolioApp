@@ -2,9 +2,9 @@ name: Runs All Unit tests
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
         run: npm ci
-      - run: npm run build 
+      - run: npm run build
       - name: Execute Unit tests
         run: npm run test
       - name: Execute Lint
