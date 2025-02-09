@@ -1,0 +1,15 @@
+.position {
+  font-size: 25px;
+}
+.company-span-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.span,
+.company {
+  color: grey;
+}
+.description {
+  font-size: 15px;
+  white-space: pre-line;
+}
