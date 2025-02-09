@@ -1,3 +1,5 @@
+import TitleComponent from "../Title/LeftSectionTitle";
+
 export interface TextProps {
   title: string;
   text: string;
@@ -7,7 +9,7 @@ export interface TextProps {
 export default function TextComponent(props: TextProps) {
   return (
     <div data-testid="text-component">
-      <h1 id={props.id}>{props.title}</h1>
+      <TitleComponent title={props.title} id={props.id} />
       <p>{props.text}</p>
     </div>
   );

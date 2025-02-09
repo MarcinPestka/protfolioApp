@@ -3,7 +3,7 @@
     "source.fixAll": "explicit",
     "source.fixAll.prettier": "always",
     "source.fixAll.eslint": "always",
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "eslint.validate": ["javascript", "typescript", "tsx"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
