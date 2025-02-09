@@ -1,0 +1,14 @@
+.test {
+  color: red;
+}
+.body-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.body-item {
+  width: 50%;
+}
+.left {
+  top: 0;
+  position: sticky;
+}
