@@ -1,0 +1,15 @@
+.text-component-text {
+  font-size: 20px;
+  font-stretch: expanded;
+}
+.text-component-wrapper {
+  width: 75%;
+}
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+a {
+  color: rgb(107, 118, 216);
+}

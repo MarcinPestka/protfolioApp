@@ -1,0 +1,23 @@
+.test {
+  color: red;
+}
+.body-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.body-item {
+  width: 50%;
+}
+.left {
+  top: 0;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 200px;
+}

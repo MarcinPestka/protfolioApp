@@ -1,0 +1,14 @@
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  list-style: inside numeric;
+  li {
+    cursor: pointer;
+  }
+  li:hover {
+    font-weight: 600;
+    color: rgb(107, 118, 216);
+  }
+}

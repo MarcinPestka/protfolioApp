@@ -1,0 +1,18 @@
+.position {
+  font-size: 25px;
+}
+.company-span-wrapper {
+  display: flex;
+  gap: 5px;
+}
+.span,
+.company {
+  color: grey;
+}
+.description {
+  font-size: 15px;
+  white-space: pre-line;
+}
+ul {
+  list-style: inside;
+}

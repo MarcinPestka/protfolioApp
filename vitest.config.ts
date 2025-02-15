@@ -1,11 +1,16 @@
 // vitest.config.ts
-import { defineConfig } from 'vitest/config'
+import { resolve } from "path";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    environment: 'jsdom',
+    watch: true,
+    environment: "jsdom",
     coverage: {
-      provider: 'v8'
+      provider: "v8",
     },
   },
-})
+  resolve: {
+    alias: [{ find: "~", replacement: resolve(__dirname, "./app") }],
+  },
+});
