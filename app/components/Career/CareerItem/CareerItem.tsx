@@ -4,18 +4,22 @@ export interface ExperienceItemProps {
   position: string;
   span: string;
   company: string;
-  description: string;
+  description: string[];
 }
 
 export default function CareerItem(props: ExperienceItemProps) {
   return (
-    <div>
-      <p className="position">{props.position}</p>
+    <div data-testid="career-item-test-id">
+      <p className="position" data-testid="position-test-id">{props.position}</p>
       <div className="company-span-wrapper">
-        <p className="company">{props.company}</p>
-        <p className="span">{props.span}</p>
+        <p className="company" data-testid="company-test-id">{props.company} |</p>
+        <p className="span" data-testid="span-test-id">{props.span}</p>
       </div>
-      <p className="description">{props.description}</p>
+      <ul>
+        {props.description.map((x) => (
+          <li data-testid="description-point-test-id">{x}</li>
+        ))}
+      </ul>
     </div>
   );
 }

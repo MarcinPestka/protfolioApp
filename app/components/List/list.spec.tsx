@@ -1,9 +1,12 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
+import TitleComponent from "../Title/LeftSectionTitle";
 import List from "./List";
-
+import * as ScrollTo from "./listService";
 describe("List component works correctly", async () => {
   const listComponent = render(<List />);
+  render(<TitleComponent title="Education" id="education-element" />);
+
   it.each([
     { testId: "about-me", text: "About me" },
     { testId: "experience", text: "Experience" },
@@ -16,13 +19,10 @@ describe("List component works correctly", async () => {
   });
 
   it("scrolls element into view", async () => {
-    const scrollIntoView = vi.fn();
-    window.HTMLElement.prototype.scrollIntoView = scrollIntoView();
-    //comment back in when list for right element gets added
-    // const element = await listComponent.findAllByTestId("education");
-    // const methodNameFake = vi.spyOn(name, "scrollTo");
-    // element[0].click();
-    // expect(methodNameFake).toHaveBeenCalledWith("education-element");
-    // expect(scrollIntoView).toHaveBeenCalledOnce();
+    window.HTMLElement.prototype.scrollIntoView = function () {};
+    const element = await listComponent.findAllByTestId("education");
+    const methodNameFake = vi.spyOn(ScrollTo, "scrollTo");
+    ScrollTo.scrollTo("education-element");
+    expect(methodNameFake).toHaveBeenCalledWith("education-element");
   });
 });
