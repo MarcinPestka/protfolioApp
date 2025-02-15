@@ -13,12 +13,17 @@ export default function Projects() {
     <div>
       <div className="projects-title-section">
         <TitleComponent title="Projects" id="projects-element" />
-        <a href="https://github.com/MarcinPestka" target="_blank" data-testid="github-link">
+        <a
+          href="https://github.com/MarcinPestka"
+          target="_blank"
+          rel="noreferrer"
+          data-testid="github-link"
+        >
           Visit my github
         </a>
       </div>
-      {projects.map((x) => (
-        <ProjectCard title={x.title} description={x.desciption} />
+      {projects.map((x, i) => (
+        <ProjectCard key={i} title={x.title} description={x.desciption} />
       ))}
     </div>
   );

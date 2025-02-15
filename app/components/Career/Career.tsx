@@ -12,8 +12,9 @@ export default function Career(props: CareerProps) {
     <div>
       <TitleComponent title={props.title} id={props.id} />
       <div className="carrer-items-wrapper">
-        {props.points.map((x) => (
+        {props.points.map((x, i) => (
           <CareerItem
+            key={i}
             position={x.position}
             span={x.span}
             company={x.company}

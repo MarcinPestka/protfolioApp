@@ -20,7 +20,6 @@ describe("List component works correctly", async () => {
 
   it("scrolls element into view", async () => {
     window.HTMLElement.prototype.scrollIntoView = function () {};
-    const element = await listComponent.findAllByTestId("education");
     const methodNameFake = vi.spyOn(ScrollTo, "scrollTo");
     ScrollTo.scrollTo("education-element");
     expect(methodNameFake).toHaveBeenCalledWith("education-element");
